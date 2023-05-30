@@ -1,0 +1,29 @@
+{
+    "fields": {
+        "project": {
+            "key": "GTS New Capability"
+        },
+        "issuetype": {
+            "name": "Test"
+        },
+        "labels": [
+            "SIT",
+            "Sprint1",
+            "demo"
+        ],
+        "summary": "[${IDManual}]${Summary}",
+        "description": "test API",
+        "customfield_10850": "${TestRepository}",
+        "customfield_10844": {
+            "steps": [
+                {
+                    "index": 1,
+                    "fields": {
+                        "action": "Check API with data",
+                        "data": "|Expect 1|clientTerminalSeqNum|policyNumber|      \n |${Expect 1}|${clientTerminalSeqNum}|${policyNumber}|"
+                    }
+                }
+            ]
+        }
+    }
+}

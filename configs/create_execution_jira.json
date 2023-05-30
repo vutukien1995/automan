@@ -1,0 +1,26 @@
+{
+    "fields": {
+        "project": {
+            "key":
+"H2HNEWCAPABILITY"
+        },
+        "summary": "[UC002] Auto debit success (test)",
+        "labels": [
+            "SIT",
+            "Sprint1",
+            "API"
+        ],
+        "issuetype": {
+            "name": "Test Execution"
+        },
+        "priority": {
+            "name": "High"
+        },
+        "assignee": {
+            "name": "kienvt3"
+        },
+        "customfield_10864": [
+            "Automation"
+        ]
+    }
+}

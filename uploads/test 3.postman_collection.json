@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "48ca5401-301f-4463-8e5d-1304f2b36874",
+		"name": "test 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3977605"
+	},
+	"item": [
+		{
+			"name": "create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('status code ', function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test('msg code ', function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Nguyen Van\");",
+							"});",
+							"",
+							"if (pm.iterationData.get('test_case')) {",
+							"    pm.test(pm.iterationData.get('test_case'), function () {",
+							"    });",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nguyen Van {{$randomLastName}}\",\n    \"description\": \"{{$randomDepartment}}\",\n    \"thrillFator\": 30,\n    \"vomitFactor\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/ride",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ride"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
